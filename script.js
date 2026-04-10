@@ -10,7 +10,7 @@ const expressionEl = document.getElementById('expression')
 
 // ===== UPDATE DISPLAY =====
 function updateDisplay(value, expr) {
-    reseultEl.textContent = value
+    result.textContent = value
     expressionEl.textContent = expr || ''
 } 
 

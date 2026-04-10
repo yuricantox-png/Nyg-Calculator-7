@@ -82,16 +82,44 @@ function handleEquals() {
 }
 
 // ===== HANDLE AC =====
-
-
+function handleAC() {
+    current = '0'
+    previous = ''
+    operator = ''
+    justEvaluated = false
+    updateDisplay('0', '')
+}
 // ===== HANDLE SIGN =====
-
+function handleSign() {
+    current = format(-parseFloat(current) * -1)
+    updateDisplay(current, expressionEl.textContent)
+}
 
 // ===== HANDLE PERCENT =====
-
+function handlePercent() {
+    current = format(parseFloat(current) / 100)
+    updateDisplay(current, expressionEl.textContent)
+}
 
 // ===== HANDLE DOT =====
-
-
+function handleDot() {
+    if (justEvaluated) { current = '0'; justEvaluated = false }
+    if (current === '') current = '0'
+    if (current.includes('.')) return
+    current += '.'
+    updateDisplay(current, expressionEl.textContent)
+}
 // ===== EVENT =====
+document.querySelectorAll('[data-num]').forEach(btn => {
+  btn.addEventListener('click', () => handleNumber(btn.dataset.num))
+})
 
+document.querySelectorAll('[data-op]').forEach(btn => {
+  btn.addEventListener('click', () => handleOperator(btn.dataset.op))
+})
+
+document.getElementById('equals').addEventListener('click', handleEquals)
+document.getElementById('ac').addEventListener('click', handleAC)
+document.getElementById('sign').addEventListener('click', handleSign)
+document.getElementById('percent').addEventListener('click', handlePercent)
+document.getElementById('dot').addEventListener('click', handleDot)

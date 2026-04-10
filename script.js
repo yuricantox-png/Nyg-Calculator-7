@@ -63,7 +63,7 @@ function handleOperator(op) {
     operator = op
     justEvaluated = false
     current = ''
-    updateDisplay(previous, previous + ' ' + symbol(op))
+    updateDisplay(previous, previous + ' ' + symbolDisplay(op))
 }
 
 // ===== HANDLE EQUALS =====
@@ -73,7 +73,7 @@ function handleEquals() {
     const result = calculate(previous, b, operator)
     updateDisplay(
         format(result),
-        previous + ' ' + symbol(operator) + ' ' + b + ' ='
+        previous + ' ' + symbolDisplay(operator) + ' ' + b + ' ='
     )
     current = format(result)
     previous = ''

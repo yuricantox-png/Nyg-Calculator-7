@@ -1,6 +1,122 @@
 /* ===== RESET & BASE ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== CALCULATOR ===== */
+.calculator {
+  width: 320px;
+  background-color: #2a2a2a;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== DISPLAY ===== */
+.display {
+  padding: 24px 20px 16px;
+  text-align: right;
+  background-color: #2a2a2a;
+  border-bottom: 1px solid #333;
+}
+
+.display #expression {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  min-height: 20px;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+
+.display #result {
+  display: block;
+  font-size: 42px;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ===== BUTTON GRID ===== */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ===== BUTTONS BASE ===== */
+.btn {
+  height: 72px;
+  border: none;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: #3a3a3a;
+}
+
+.btn:active {
+  background-color: #461919;
+}
+
+/* remove borda direita da última coluna */
+.btn:nth-child(4n) {
+  border-right: none;
+}
+
+/* remove borda inferior da última linha */
+.btn:nth-last-child(-n+4) {
+  border-bottom: none;
+}
+
+/* ===== BUTTON TYPES ===== */
+.btn.ac {
+  color: #ff6b6b;
+  font-weight: 500;
+}
+
+.btn.op {
+  color: #6bb5ff;
+  font-weight: 500;
+}
+
+.btn.eq {
+  background-color: #6bb5ff;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.btn.eq:hover {
+  background-color: #89c4ff;
+}
+
+/* ===== ZERO BUTTON (span 2 cols) ===== */
+.btn.zero {
+  grid-column: span 2;
+  border-right: 1px solid #333;
+  justify-content: flex-start;
+  padding-left: 28px;
 }

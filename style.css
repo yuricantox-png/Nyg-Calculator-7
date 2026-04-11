@@ -175,3 +175,21 @@ body {
 #history-list li:last-child {
   border-bottom: none;
 }
+
+#history-list .hist-expr {
+  font-size: 13px;
+  color: #888;
+}
+
+#history-list .hist-result {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.history-empty {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  color: #555;
+}

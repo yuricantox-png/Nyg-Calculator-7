@@ -29,7 +29,7 @@ function calculate(a, b, op) {
     if (op === '-') return format(numA - numB)
     if (op === '*') return format(numA * numB)
     if (op === '/') {
-        if (numB === 0) return 'Burro'
+        if (numB === 0) return 'Error'
         return numA / numB
     }
 }
@@ -39,6 +39,7 @@ function symbolDisplay(op) {
     if (op === '*') return '×'
     if (op === '/') return '÷'
     if (op === '-') return '-'
+    if (op === '%') return '%'
     return op
 }
 

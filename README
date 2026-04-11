@@ -1,1 +1,4 @@
 PROJECT START 10/04/26 - 13:00
+git add .
+git commit -m "assunto"
+git push 

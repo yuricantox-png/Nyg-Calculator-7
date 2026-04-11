@@ -82,12 +82,12 @@ body {
   background-color: #461919;
 }
 
-/* remove borda direita da última coluna */
+/* REMOVE RIGHT BORDER FROM LAST COLUMN */
 .btn:nth-child(4n) {
   border-right: none;
 }
 
-/* remove borda inferior da última linha */
+/* REMOVE BOTTOM BORDER FROM LAST ROW */
 .btn:nth-last-child(-n+4) {
   border-bottom: none;
 }
@@ -119,4 +119,59 @@ body {
   border-right: 1px solid #333;
   justify-content: flex-start;
   padding-left: 28px;
+}
+
+/* ===== HISTORY PANEL ===== */
+.history {
+  width: 320px;
+  margin-top: 16px;
+  background-color: #2a2a2a;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: 1px solid #333;
+}
+
+.history-header span {
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;  
+}
+
+.history-header button {
+  font-size: 12px;
+  color: #ff6b6b;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.history-header button:hover {
+  opacity: 0.7;
+}
+
+#history-list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#history-list li {
+  padding: 10px 16px;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+#history-list li:last-child {
+  border-bottom: none;
 }

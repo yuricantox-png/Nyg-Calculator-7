@@ -32,6 +32,7 @@ function calculate(a, b, op) {
         if (numB === 0) return 'Error'
         return numA / numB
     }
+    if (op === '%') return format(numA % numB)
 }
 
 // ===== SYMBOL DISPLAY =====

@@ -77,6 +77,8 @@ function handleEquals() {
         format(result),
         previous + ' ' + symbolDisplay(operator) + ' ' + b + ' ='
     )
+    addToHistory(previous + ' ' + symbolDisplay(operator) + ' ' + b, format(result))
+    
     current = format(result)
     previous = ''
     operator = ''
@@ -125,3 +127,22 @@ document.getElementById('ac').addEventListener('click', handleAC)
 document.getElementById('sign').addEventListener('click', handleSign)
 document.getElementById('percent').addEventListener('click', handlePercent)
 document.getElementById('dot').addEventListener('click', handleDot)
+
+// ===== HISTORY =====
+const historyList = document.getElementById('history-list')
+
+function addToHistory(expr, result) {
+  const empty = historyList.querySelector('.history-empty')
+  if (empty) empty.remove()
+
+  const li = document.createElement('li')
+  li.innerHTML = `
+    <span class="hist-expr">${expr}</span>
+    <span class="hist-result">${result}</span>
+  `
+  historyList.prepend(li)
+}
+
+document.getElementById('clear-history').addEventListener('click', () => {
+  historyList.innerHTML = '<li class="history-empty">No calculations yet</li>'
+})

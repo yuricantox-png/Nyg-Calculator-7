@@ -200,26 +200,26 @@ body {
 @media (max-width: 400px) {
   .calculator {
     width: 100vw;
-    border-radius: 0;;
+    border-radius: 0;
   }
-}
 
-.history {
-  width: 100vw;
-  border-radius: 0;;
-}
+  .history {
+    width: 100vw;
+    border-radius: 0;
+  }
 
-.btn {
-  height: 60px;
-  font-size: 16px;
-}
+  .btn {
+    height: 60px;
+    font-size: 16px;
+  }
 
-.display #result {
-  font-size: 34px;
-}
+  .display #result {
+    font-size: 34px;
+  }
 
-.display #expression {
-  font-size: 12px;
+  .display #expression {
+    font-size: 12px;
+  }
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
@@ -229,10 +229,5 @@ body {
 
   .history {
     width: 90vw;
-  }
-
-
-  .btn {
-    height: 64px;
   }
 }

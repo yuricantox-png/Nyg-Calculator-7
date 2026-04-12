@@ -151,3 +151,30 @@ function addToHistory(expr, result) {
 document.getElementById('clear-history').addEventListener('click', () => {
   historyList.innerHTML = '<li class="history-empty">No calculations yet</li>'
 })
+
+// ===== HANDLE BACKSPACE =====
+function handleBackspace() {
+  if (justEvaluated) return
+  if (current.length <= 1) {
+    current = '0'
+  } else {
+    current = current.slice(0, -1)
+  }
+  updateDisplay(current, expressionEl.textContent)
+}
+
+// ===== KEYBOARD SUPPORT =====
+document.addEventListener('keydown', (e) => {
+  const key = e.key
+
+  if (key >= '0' && key <= '9')     handleNumber(key)
+  if (key === '+')                   handleOperator('+')
+  if (key === '-')                   handleOperator('-')
+  if (key === '*')                   handleOperator('*')
+  if (key === '/')                  { e.preventDefault(); handleOperator('/') }
+  if (key === 'Enter' || key === '=') handleEquals()
+  if (key === 'Backspace')           handleBackspace()
+  if (key === 'Escape')              handleAC()
+  if (key === '.')                   handleDot()
+  if (key === '%')                   handlePercent()
+})

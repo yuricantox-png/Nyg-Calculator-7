@@ -95,7 +95,8 @@ function handleAC() {
 }
 // ===== HANDLE SIGN =====
 function handleSign() {
-    current = format(-parseFloat(current) * -1)
+    if (current === '' || current === '0') return
+    current = format(parseFloat(current) * -1)
     updateDisplay(current, expressionEl.textContent)
 }
 

@@ -1,4 +1,89 @@
 PROJECT START 10/04/26 - 13:00
-git add .
-git commit -m "assunto"
-git push 
+
+# 🧮 NYG Calculator
+
+A clean and minimalist calculator built with pure HTML, CSS and JavaScript.
+
+![GitHub repo size]
+![GitHub language count]
+![GitHub last commit]
+---
+
+## 📸 Preview
+
+<!-- URL screenshot -->
+> 🔗 Live demo coming soon via GitHub Pages
+
+---
+
+## ✨ Features
+
+- ➕ Basic operations — addition, subtraction, multiplication, division
+- 💬 Expression display — shows the full expression while typing
+- 📋 Calculation history — keeps track of past results
+- 🧹 Clear history — reset history with one click
+- ➕➖ Sign toggle — switch between positive and negative
+- 💯 Percentage — context-aware percentage calculation
+- 🔢 Decimal support — validated decimal point input
+- ❌ Error handling — displays "Error" on division by zero
+
+---
+
+## 🛠️ Built With
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+
+---
+
+## 📁 Project Structure
+
+NYG-Calculator/
+├── index.html     → Page structure
+├── style.css      → Visual styling
+├── script.js      → Calculation logic
+└── README.md      → Project documentation
+
+---
+
+## 🚀 Getting Started
+
+### Option 1 — Open locally
+```bash
+# Clone the repository
+git clone https:
+
+# Open in browser
+Open index.html in your browser
+```
+
+### Option 2 — Live demo
+> GitHub Pages link will be added after deploy (Issue #10)
+
+---
+
+## 📌 Project Roadmap
+
+- [x] HTML structure
+- [x] CSS styling
+- [x] JavaScript logic
+- [x] Calculation history
+- [ ] Responsive layout (mobile)
+- [ ] Keyboard support
+- [ ] Error handling
+- [ ] Decimal validation
+- [ ] Dark/Light mode toggle
+- [ ] Deploy on GitHub Pages
+
+---
+
+## 👤 Author
+
+**Yuri** — [@yuricantox-png](https://github.com/yuricantox-png)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).

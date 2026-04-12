@@ -101,7 +101,11 @@ function handleSign() {
 
 // ===== HANDLE PERCENT =====
 function handlePercent() {
-    current = format(parseFloat(current) / 100)
+    if (previous && operator) {
+        current = format((parseFloat(previous) * parseFloat(current)) / 100)
+    }   else {
+        current = format(parseFloat(current) / 100)
+    }
     updateDisplay(current, expressionEl.textContent)
 }
 

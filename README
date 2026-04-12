@@ -1,22 +1,23 @@
 PROJECT START 10/04/26 - 13:00
 
-# 🧮 NYG Calculator
+🧮 NYG Calculator
 
 A clean and minimalist calculator built with pure HTML, CSS and JavaScript.
 
 ![GitHub repo size]
 ![GitHub language count]
 ![GitHub last commit]
+
 ---
 
-## 📸 Preview
+📸 Preview
 
 <!-- URL screenshot -->
 > 🔗 Live demo coming soon via GitHub Pages
 
 ---
 
-## ✨ Features
+✨ Features
 
 - ➕ Basic operations — addition, subtraction, multiplication, division
 - 💬 Expression display — shows the full expression while typing
@@ -29,15 +30,15 @@ A clean and minimalist calculator built with pure HTML, CSS and JavaScript.
 
 ---
 
-## 🛠️ Built With
+🛠️ Built With
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![HTML5]
+![CSS3]
+![JavaScript]
 
 ---
 
-## 📁 Project Structure
+📁 Project Structure
 
 NYG-Calculator/
 ├── index.html     → Page structure
@@ -47,7 +48,7 @@ NYG-Calculator/
 
 ---
 
-## 🚀 Getting Started
+🚀 Getting Started
 
 ### Option 1 — Open locally
 ```bash
@@ -63,7 +64,7 @@ Open index.html in your browser
 
 ---
 
-## 📌 Project Roadmap
+📌 Project Roadmap
 
 - [x] HTML structure
 - [x] CSS styling
@@ -78,12 +79,12 @@ Open index.html in your browser
 
 ---
 
-## 👤 Author
+👤 Author
 
-**Yuri** — [@yuricantox-png](https://github.com/yuricantox-png)
+**Yuri** — [@NyG007](https://github.com/NyG007)
 
 ---
 
-## 📄 License
+📄 License
 
 This project is open source and available under the [MIT License](LICENSE).

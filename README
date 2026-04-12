@@ -70,7 +70,7 @@ Open index.html in your browser
 - [x] CSS styling
 - [x] JavaScript logic
 - [x] Calculation history
-- [ ] Responsive layout (mobile)
+- [x] Responsive layout (mobile)
 - [ ] Keyboard support
 - [ ] Error handling
 - [ ] Decimal validation

@@ -195,3 +195,44 @@ body {
   font-size: 13px;
   color: #555;
 }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 400px) {
+  .calculator {
+    width: 100vw;
+    border-radius: 0;;
+  }
+}
+
+.history {
+  width: 100vw;
+  border-radius: 0;;
+}
+
+.btn {
+  height: 60px;
+  font-size: 16px;
+}
+
+.display #result {
+  font-size: 34px;
+}
+
+.display #expression {
+  font-size: 12px;
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .calculator {
+    width: 90vw;
+  }
+
+  .history {
+    width: 90vw;
+  }
+
+
+  .btn {
+    height: 64px;
+  }
+}

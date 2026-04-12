@@ -1,63 +1,63 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<!DOCTYPE html> <!-- Documento tipo HTML5 -->
+<html lang="pt-BR"> <!-- tag raiz do HTML, idioma português -->
+  <head> <!-- cabeçalho da página, invisível ao usuário -->
+    <meta charset="UTF-8" /> <!-- codificação para aceitar acentos e símbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- a página se adapta a qualquer tamanho de tela -->
+    <title>NyG-Calculator</title> <!-- nome na aba do navegador -->
+    <link rel="stylesheet" href="style.css" /> <!-- conecta o arquivo CSS à página -->
+  </head> <!-- fecha cabeçalho -->
+  <body> <!-- corpo da página, tudo que o usuário vê -->
 
-    <div class="calculator">
+    <div class="calculator"> <!-- container principal da calculadora -->
 
       <!-- BOTÃO DE TEMA -->
-      <div class="theme-toggle">
-        <button id="theme-btn">☀️</button>
-      </div>
+      <div class="theme-toggle"> <!-- container de alternar entre dark e light mode -->
+        <button id="theme-btn">☀️</button> <!-- botão que troca o tema, começa com ícone de sol (dark mode) -->
+      </div> <!-- fecha o container do tema -->
 
-      <div class="display">
-        <span id="expression"></span>
-        <span id="result">0</span>
-      </div>
+      <div class="display"> <!-- área de exibição dos números -->
+        <span id="expression"></span> <!-- exibe a expressão sendo digitada -->
+        <span id="result">0</span> <!-- exibe o resultado atual, começa em 0 -->
+      </div> <!-- fecha o display -->
 
-      <div class="buttons">
+      <div class="buttons"> <!-- grade de botões -->
 
-        <button class="btn ac"   id="ac">AC</button>
-        <button class="btn op"   id="sign">+/-</button>
-        <button class="btn op"   id="percent">%</button>
-        <button class="btn op"   data-op="/">÷</button>
+        <button class="btn ac"   id="ac">AC</button> <!-- reseta tudo e volta ao estado inicial -->
+        <button class="btn op"   id="sign">+/-</button> <!-- inverte o sinal do número atual -->
+        <button class="btn op"   id="percent">%</button> <!-- bconverte o número em porcentagem -->
+        <button class="btn op"   data-op="/">÷</button> <!-- divisão, data-op armazena o operador para o JS capturar -->
 
-        <button class="btn num"  data-num="7">7</button>
-        <button class="btn num"  data-num="8">8</button>
-        <button class="btn num"  data-num="9">9</button>
-        <button class="btn op"   data-op="*">×</button>
+        <button class="btn num"  data-num="7">7</button> <!-- botão 7, data-num armazena o valor para o JS -->
+        <button class="btn num"  data-num="8">8</button> <!-- botão 8 -->
+        <button class="btn num"  data-num="9">9</button> <!-- botão 9 -->
+        <button class="btn op"   data-op="*">×</button> <!-- multiplicação -->
 
-        <button class="btn num"  data-num="4">4</button>
-        <button class="btn num"  data-num="5">5</button>
-        <button class="btn num"  data-num="6">6</button>
-        <button class="btn op"   data-op="-">−</button>
+        <button class="btn num"  data-num="4">4</button> <!-- botão 4 -->
+        <button class="btn num"  data-num="5">5</button> <!-- botão 5 -->
+        <button class="btn num"  data-num="6">6</button> <!-- botão 6 -->
+        <button class="btn op"   data-op="-">−</button> <!-- subtração -->
 
-        <button class="btn num"  data-num="1">1</button>
-        <button class="btn num"  data-num="2">2</button>
-        <button class="btn num"  data-num="3">3</button>
-        <button class="btn op"   data-op="+">+</button>
+        <button class="btn num"  data-num="1">1</button> <!-- botão 1 -->
+        <button class="btn num"  data-num="2">2</button> <!-- botão 2 -->
+        <button class="btn num"  data-num="3">3</button> <!-- botão 3 -->
+        <button class="btn op"   data-op="+">+</button> <!-- adição -->
 
-        <button class="btn num zero" data-num="0">0</button>
-        <button class="btn num"  id="dot">.</button>
-        <button class="btn eq"   id="equals">=</button>
+        <button class="btn num zero" data-num="0">0</button> <!-- botão 0, classe "zero" ocupa 2 colunas na grade -->
+        <button class="btn num"  id="dot">.</button> <!-- ponto decimal -->
+        <button class="btn eq"   id="equals">=</button> <!-- igual, dispara o cálculo -->
 
-      </div>
-    </div>
+      </div> <!-- fecha o grade dos botões -->
+    </div> <!-- fecha o container da calculadora -->
 
     <!-- HISTORY PANEL -->
-    <div class="history">
-      <div class="history-header">
-        <span>History</span>
-        <button id="clear-history">Clear</button>
-      </div>
-      <ul id="history-list"></ul>
-    </div>
+    <div class="history"> <!-- painel de histórico de cálculos -->
+      <div class="history-header"> <!-- cabeçalho do histórico com título e botão de limpar -->
+        <span>History</span> <!-- texto exibido no topo -->
+        <button id="clear-history">Clear</button> <!-- apaga todos os registros do histórico -->
+      </div> <!-- fecha o cabeçalho do histórico -->
+      <ul id="history-list"></ul> <!-- JS preenche com os cálculos realizados -->
+    </div> <!-- fecha o histórico -->
 
-    <script src="script.js"></script>
-  </body>
-</html>
+    <script src="script.js"></script> <!-- conecta o JavaScript -->
+  </body> <!-- fecha a página -->
+</html> <!-- fecha a tag raiz -->

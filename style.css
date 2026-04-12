@@ -1,290 +1,290 @@
 /* ===== THEMES ===== */
-:root {
-  --bg-page: #1a1a1a;
-  --bg-calc: #2a2a2a;
-  --bg-btn-hover: #3a3a3a;
-  --bg-btn-active: #444;
-  --color-border: #333;
-  --color-text: #ffffff;
-  --color-text-muted: #888;
-  --color-text-empty: #555;
+:root { /* define variáveis CSS globais para o tema escuro (padrão) */
+  --bg-page: #1a1a1a; /* cor de fundo da página no dark mode */
+  --bg-calc: #2a2a2a; /* cor de fundo da calculadora e histórico no dark mode */
+  --bg-btn-hover: #3a3a3a; /* cor dos botões ao passar o mouse no dark mode */
+  --bg-btn-active: #444; /* cor dos botões ao clicar no dark mode */
+  --color-border: #333; /* cor das bordas entre os botões no dark mode */
+  --color-text: #ffffff; /* cor principal do texto no dark mode */
+  --color-text-muted: #888; /* cor do texto secundário (expressão, labels) no dark mode */
+  --color-text-empty: #555; /* cor do texto quando o histórico está vazio no dark mode */
 }
 
-:root.light {
-  --bg-page: #f0f0f0;
-  --bg-calc: #ffffff;
-  --bg-btn-hover: #e8e8e8;
-  --bg-btn-active: #d8d8d8;
-  --color-border: #ddd;
-  --color-text: #1a1a1a;
-  --color-text-muted: #888;
-  --color-text-empty: #bbb;
+:root.light { /* sobrescreve as variáveis quando a classe "light" é adicionada ao <html> */
+  --bg-page: #f0f0f0; /* cor de fundo da página no light mode */
+  --bg-calc: #ffffff; /* cor de fundo da calculadora no light mode */
+  --bg-btn-hover: #e8e8e8; /* cor dos botões ao passar o mouse no light mode */
+  --bg-btn-active: #d8d8d8; /* cor dos botões ao clicar no light mode */
+  --color-border: #ddd; /* cor das bordas no light mode */
+  --color-text: #1a1a1a; /* cor principal do texto no light mode */
+  --color-text-muted: #888; /* cor do texto secundário no light mode */
+  --color-text-empty: #bbb; /* cor do texto quando histórico está vazio no light mode */
 }
 
 /* ===== RESET & BASE ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* { /* seleciona todos os elementos da página */
+  margin: 0; /* remove margens padrão do navegador */
+  padding: 0; /* remove espaçamentos internos padrão do navegador */
+  box-sizing: border-box; /* faz o tamanho dos elementos incluir borda e padding */
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  background-color: var(--bg-page);
-  font-family: 'Segoe UI', sans-serif;
-  transition: background-color 0.3s ease;
+body { /* estiliza o corpo da página */
+  min-height: 100vh; /* garante que o body ocupe no mínimo a altura total da tela */
+  display: flex; /* ativa o flexbox para alinhar os elementos */
+  flex-direction: column; /* empilha os elementos em coluna (calculadora em cima, histórico embaixo) */
+  align-items: center; /* centraliza os elementos horizontalmente */
+  justify-content: center; /* centraliza os elementos verticalmente */
+  gap: 0; /* sem espaço extra entre os elementos filhos */
+  background-color: var(--bg-page); /* usa a variável de cor de fundo conforme o tema ativo */
+  font-family: 'Segoe UI', sans-serif; /* define a fonte da página */
+  transition: background-color 0.3s ease; /* anima a mudança de cor de fundo ao trocar de tema */
 }
 
 /* ===== CALCULATOR ===== */
-.calculator {
-  width: 320px;
-  background-color: var(--bg-calc);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
+.calculator { /* estiliza o container principal da calculadora */
+  width: 320px; /* largura fixa da calculadora */
+  background-color: var(--bg-calc); /* cor de fundo conforme o tema */
+  border-radius: 20px; /* arredonda os cantos da calculadora */
+  overflow: hidden; /* garante que os botões não ultrapassem as bordas arredondadas */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* sombra embaixo da calculadora para dar profundidade */
+  transition: background-color 0.3s ease; /* anima a mudança de cor ao trocar de tema */
 }
 
 /* ===== THEME TOGGLE ===== */
-.theme-toggle {
-  display: flex;
-  justify-content: flex-end;
-  padding: 8px 12px 0;
+.theme-toggle { /* container do botão de alternar tema */
+  display: flex; /* ativa o flexbox */
+  justify-content: flex-end; /* alinha o botão à direita */
+  padding: 8px 12px 0; /* espaçamento interno: cima, lados, sem espaço embaixo */
 }
 
-#theme-btn {
-  background: none;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 4px 6px;
-  border-radius: 50%;
-  transition: background-color 0.15s;
+#theme-btn { /* estiliza o botão de tema */
+  background: none; /* remove o fundo padrão do botão */
+  border: none; /* remove a borda padrão do botão */
+  font-size: 16px; /* tamanho do ícone emoji */
+  cursor: pointer; /* muda o cursor para mãozinha ao passar sobre o botão */
+  padding: 4px 6px; /* espaçamento interno do botão */
+  border-radius: 50%; /* deixa o botão redondo */
+  transition: background-color 0.15s; /* anima o hover do botão */
 }
 
-#theme-btn:hover {
-  background-color: var(--bg-btn-hover);
+#theme-btn:hover { /* estilo do botão de tema ao passar o mouse */
+  background-color: var(--bg-btn-hover); /* destaca o botão com a cor de hover do tema */
 }
 
 /* ===== DISPLAY ===== */
-.display {
-  padding: 16px 20px 16px;
-  text-align: right;
-  background-color: var(--bg-calc);
-  border-bottom: 1px solid var(--color-border);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+.display { /* estiliza a área de exibição dos números */
+  padding: 16px 20px 16px; /* espaçamento interno: cima, lados, baixo */
+  text-align: right; /* alinha o texto à direita como uma calculadora real */
+  background-color: var(--bg-calc); /* cor de fundo conforme o tema */
+  border-bottom: 1px solid var(--color-border); /* linha separadora entre o display e os botões */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* anima a troca de tema */
 }
 
-.display #expression {
-  display: block;
-  font-size: 14px;
-  color: var(--color-text-muted);
-  min-height: 20px;
-  margin-bottom: 8px;
-  letter-spacing: 0.03em;
+.display #expression { /* estiliza o texto da expressão (linha de cima do display) */
+  display: block; /* faz o span se comportar como bloco para ocupar a linha inteira */
+  font-size: 14px; /* tamanho pequeno para a expressão */
+  color: var(--color-text-muted); /* cor mais fraca, é secundária */
+  min-height: 20px; /* garante altura mesmo quando vazio, evita o display de pular */
+  margin-bottom: 8px; /* espaço entre a expressão e o resultado */
+  letter-spacing: 0.03em; /* leve espaçamento entre as letras */
 }
 
-.display #result {
-  display: block;
-  font-size: 42px;
-  font-weight: 300;
-  color: var(--color-text);
-  letter-spacing: -0.02em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  transition: color 0.3s ease;
+.display #result { /* estiliza o número principal do display */
+  display: block; /* ocupa a linha inteira */
+  font-size: 42px; /* tamanho grande para destaque */
+  font-weight: 300; /* fonte fina para visual elegante */
+  color: var(--color-text); /* cor principal do tema */
+  letter-spacing: -0.02em; /* letras um pouco mais juntas para números grandes */
+  overflow: hidden; /* esconde o texto que ultrapassar a largura */
+  text-overflow: ellipsis; /* coloca "..." quando o número for muito grande */
+  white-space: nowrap; /* impede que o número quebre em duas linhas */
+  transition: color 0.3s ease; /* anima a mudança de cor ao trocar de tema */
 }
 
 /* ===== BUTTON GRID ===== */
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.buttons { /* estiliza o container da grade de botões */
+  display: grid; /* ativa o CSS Grid para organizar os botões */
+  grid-template-columns: repeat(4, 1fr); /* cria 4 colunas de tamanho igual */
 }
 
 /* ===== BUTTONS BASE ===== */
-.btn {
-  height: 72px;
-  border: none;
-  border-right: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  background-color: transparent;
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--color-text);
-  cursor: pointer;
-  transition: background-color 0.15s ease, color 0.3s ease, border-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.btn { /* estilo base aplicado em todos os botões */
+  height: 72px; /* altura de cada botão */
+  border: none; /* remove borda padrão */
+  border-right: 1px solid var(--color-border); /* linha separadora à direita de cada botão */
+  border-bottom: 1px solid var(--color-border); /* linha separadora abaixo de cada botão */
+  background-color: transparent; /* fundo transparente, herda a cor do container */
+  font-size: 18px; /* tamanho do texto dos botões */
+  font-weight: 400; /* peso normal da fonte */
+  color: var(--color-text); /* cor do texto conforme o tema */
+  cursor: pointer; /* muda o cursor para mãozinha */
+  transition: background-color 0.15s ease, color 0.3s ease, border-color 0.3s ease; /* anima hover e troca de tema */
+  display: flex; /* ativa flexbox para centralizar o conteúdo */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
 }
 
-.btn:hover {
-  background-color: var(--bg-btn-hover);
+.btn:hover { /* estilo ao passar o mouse sobre qualquer botão */
+  background-color: var(--bg-btn-hover); /* destaca o botão com cor de hover do tema */
 }
 
-.btn:active {
-  background-color: var(--bg-btn-active);
+.btn:active { /* estilo ao clicar em qualquer botão */
+  background-color: var(--bg-btn-active); /* escurece o botão ao clicar */
 }
 
 /* REMOVE RIGHT BORDER FROM LAST COLUMN */
-.btn:nth-child(4n) {
-  border-right: none;
+.btn:nth-child(4n) { /* seleciona todo botão que é múltiplo de 4 (último de cada linha) */
+  border-right: none; /* remove a borda direita para não duplicar com a borda da calculadora */
 }
 
 /* REMOVE BOTTOM BORDER FROM LAST ROW */
-.btn:nth-last-child(-n+4) {
-  border-bottom: none;
+.btn:nth-last-child(-n+4) { /* seleciona os últimos 4 botões (última linha) */
+  border-bottom: none; /* remove a borda inferior para não duplicar com a borda da calculadora */
 }
 
 /* ===== BUTTON TYPES ===== */
-.btn.ac {
-  color: #ff6b6b;
-  font-weight: 500;
+.btn.ac { /* estilo específico do botão AC */
+  color: #ff6b6b; /* cor vermelha para indicar ação destrutiva (apagar tudo) */
+  font-weight: 500; /* um pouco mais bold para destaque */
 }
 
-.btn.op {
-  color: #6bb5ff;
-  font-weight: 500;
+.btn.op { /* estilo dos botões de operadores e funções */
+  color: #6bb5ff; /* cor azul para diferenciar dos números */
+  font-weight: 500; /* um pouco mais bold */
 }
 
-.btn.eq {
-  background-color: #6bb5ff;
-  color: #1a1a1a;
-  font-weight: 600;
+.btn.eq { /* estilo do botão de igual */
+  background-color: #6bb5ff; /* fundo azul para dar destaque ao botão principal */
+  color: #1a1a1a; /* texto escuro sobre fundo azul para contraste */
+  font-weight: 600; /* mais bold por ser o botão de ação principal */
 }
 
-.btn.eq:hover {
-  background-color: #89c4ff;
+.btn.eq:hover { /* estilo do botão igual ao passar o mouse */
+  background-color: #89c4ff; /* azul mais claro no hover */
 }
 
 /* ===== ZERO BUTTON (span 2 cols) ===== */
-.btn.zero {
-  grid-column: span 2;
-  border-right: 1px solid var(--color-border);
-  justify-content: flex-start;
-  padding-left: 28px;
+.btn.zero { /* estilo especial do botão 0 */
+  grid-column: span 2; /* faz o botão ocupar 2 colunas da grade */
+  border-right: 1px solid var(--color-border); /* reaplica a borda direita (necessário após o span) */
+  justify-content: flex-start; /* alinha o texto à esquerda como nas calculadoras reais */
+  padding-left: 28px; /* espaçamento para o texto não ficar colado na borda */
 }
 
 /* ===== ERROR STATE ===== */
-.display #result.error {
-  color: #ff6b6b;
-  font-size: 32px;
+.display #result.error { /* estilo aplicado quando o resultado é "Error" */
+  color: #ff6b6b; /* texto vermelho para indicar erro */
+  font-size: 32px; /* tamanho menor para a palavra "Error" caber no display */
 }
 
 /* ===== HISTORY PANEL ===== */
-.history {
-  width: 320px;
-  margin-top: 16px;
-  background-color: var(--bg-calc);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: background-color 0.3s ease;
+.history { /* container do painel de histórico */
+  width: 320px; /* mesma largura da calculadora para alinhar */
+  margin-top: 16px; /* espaço entre a calculadora e o histórico */
+  background-color: var(--bg-calc); /* cor de fundo conforme o tema */
+  border-radius: 16px; /* cantos arredondados */
+  overflow: hidden; /* conteúdo não ultrapassa os cantos arredondados */
+  transition: background-color 0.3s ease; /* anima a troca de tema */
 }
 
-.history-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--color-border);
-  transition: border-color 0.3s ease;
+.history-header { /* cabeçalho do painel de histórico */
+  display: flex; /* flexbox para alinhar título e botão lado a lado */
+  justify-content: space-between; /* título à esquerda, botão à direita */
+  align-items: center; /* alinha verticalmente ao centro */
+  padding: 12px 16px; /* espaçamento interno */
+  border-bottom: 1px solid var(--color-border); /* linha separadora abaixo do cabeçalho */
+  transition: border-color 0.3s ease; /* anima a troca de tema */
 }
 
-.history-header span {
-  font-size: 13px;
-  color: var(--color-text-muted);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+.history-header span { /* texto "HISTORY" no cabeçalho */
+  font-size: 13px; /* tamanho pequeno */
+  color: var(--color-text-muted); /* cor secundária, não é o foco */
+  letter-spacing: 0.05em; /* leve espaçamento entre letras */
+  text-transform: uppercase; /* deixa o texto em maiúsculas */
 }
 
-.history-header button {
-  font-size: 12px;
-  color: #ff6b6b;
-  background: none;
-  border: none;
-  cursor: pointer;
+.history-header button { /* botão "Clear" no cabeçalho do histórico */
+  font-size: 12px; /* tamanho pequeno */
+  color: #ff6b6b; /* vermelho para indicar ação de apagar */
+  background: none; /* sem fundo */
+  border: none; /* sem borda */
+  cursor: pointer; /* cursor de mãozinha */
 }
 
-.history-header button:hover {
-  opacity: 0.7;
+.history-header button:hover { /* botão Clear ao passar o mouse */
+  opacity: 0.7; /* fica transparente no hover para dar feedback visual */
 }
 
-#history-list {
-  list-style: none;
-  max-height: 200px;
-  overflow-y: auto;
+#history-list { /* lista de cálculos do histórico */
+  list-style: none; /* remove os marcadores de lista padrão */
+  max-height: 200px; /* altura máxima antes de aparecer o scroll */
+  overflow-y: auto; /* adiciona scroll vertical quando a lista for muito longa */
 }
 
-#history-list li {
-  padding: 10px 16px;
-  border-bottom: 1px solid var(--color-border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  transition: border-color 0.3s ease;
+#history-list li { /* cada item da lista de histórico */
+  padding: 10px 16px; /* espaçamento interno de cada item */
+  border-bottom: 1px solid var(--color-border); /* linha separadora entre os itens */
+  display: flex; /* flexbox para alinhar expressão e resultado */
+  justify-content: space-between; /* expressão à esquerda, resultado à direita */
+  align-items: center; /* alinha verticalmente ao centro */
+  gap: 12px; /* espaço entre a expressão e o resultado */
+  transition: border-color 0.3s ease; /* anima a troca de tema */
 }
 
-#history-list li:last-child {
-  border-bottom: none;
+#history-list li:last-child { /* último item da lista */
+  border-bottom: none; /* remove a borda do último item para não duplicar */
 }
 
-#history-list .hist-expr {
-  font-size: 13px;
-  color: var(--color-text-muted);
+#history-list .hist-expr { /* texto da expressão no histórico, ex: "10 + 5" */
+  font-size: 13px; /* tamanho pequeno, é a informação secundária */
+  color: var(--color-text-muted); /* cor mais fraca, é secundária */
 }
 
-#history-list .hist-result {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--color-text);
+#history-list .hist-result { /* texto do resultado no histórico, ex: "15" */
+  font-size: 16px; /* maior que a expressão, é a informação principal */
+  font-weight: 500; /* semi-bold para destaque */
+  color: var(--color-text); /* cor principal do tema */
 }
 
-.history-empty {
-  text-align: center;
-  padding: 20px;
-  font-size: 13px;
-  color: var(--color-text-empty);
+.history-empty { /* mensagem quando o histórico está vazio */
+  text-align: center; /* centraliza o texto */
+  padding: 20px; /* espaçamento generoso */
+  font-size: 13px; /* tamanho pequeno */
+  color: var(--color-text-empty); /* cor bem fraca, é apenas informativa */
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 400px) {
+@media (max-width: 400px) { /* regras aplicadas apenas em telas menores que 400px */
   .calculator {
-    width: 100vw;
-    border-radius: 0;
+    width: 100vw; /* calculadora ocupa toda a largura da tela */
+    border-radius: 0; /* remove os cantos arredondados em telas pequenas */
   }
 
   .history {
-    width: 100vw;
-    border-radius: 0;
+    width: 100vw; /* histórico ocupa toda a largura da tela */
+    border-radius: 0; /* remove os cantos arredondados */
   }
 
   .btn {
-    height: 60px;
-    font-size: 16px;
+    height: 60px; /* botões um pouco menores em mobile */
+    font-size: 16px; /* fonte um pouco menor */
   }
 
   .display #result {
-    font-size: 34px;
+    font-size: 34px; /* resultado menor para caber em telas pequenas */
   }
 
   .display #expression {
-    font-size: 12px;
+    font-size: 12px; /* expressão menor em mobile */
   }
 }
 
-@media (min-width: 401px) and (max-width: 600px) {
+@media (min-width: 401px) and (max-width: 600px) { /* telas médias entre 401px e 600px */
   .calculator {
-    width: 90vw;
+    width: 90vw; /* calculadora ocupa 90% da largura da tela */
   }
 
   .history {
-    width: 90vw;
+    width: 90vw; /* histórico acompanha a largura da calculadora */
   }
 }

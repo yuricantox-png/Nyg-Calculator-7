@@ -1,21 +1,11 @@
-PROJECT START 10/04/26 - 13:00
-
-🧮 NYG Calculator
+🧮 NYG Calculator - Porject start 10/04/26 - 13:00
 
 A clean and minimalist calculator built with pure HTML, CSS and JavaScript.
 
-![GitHub repo size]
-![GitHub language count]
-![GitHub last commit]
-
----
-
 📸 Preview
 
-<!-- URL screenshot -->
-> 🔗 Live demo coming soon via GitHub Pages
+![alt text](image.png)
 
----
 
 ✨ Features
 
@@ -28,15 +18,11 @@ A clean and minimalist calculator built with pure HTML, CSS and JavaScript.
 - 🔢 Decimal support — validated decimal point input
 - ❌ Error handling — displays "Error" on division by zero
 
----
-
 🛠️ Built With
 
 ![HTML5]
 ![CSS3]
 ![JavaScript]
-
----
 
 📁 Project Structure
 
@@ -45,8 +31,6 @@ NYG-Calculator/
 ├── style.css      → Visual styling
 ├── script.js      → Calculation logic
 └── README.md      → Project documentation
-
----
 
 🚀 Getting Started
 
@@ -59,11 +43,6 @@ git clone https:
 Open index.html in your browser
 ```
 
-### Option 2 — Live demo
-> GitHub Pages link will be added after deploy (Issue #10)
-
----
-
 📌 Project Roadmap
 
 - [x] HTML structure
@@ -71,20 +50,12 @@ Open index.html in your browser
 - [x] JavaScript logic
 - [x] Calculation history
 - [x] Responsive layout (mobile)
-- [ ] Keyboard support
-- [ ] Error handling
-- [ ] Decimal validation
-- [ ] Dark/Light mode toggle
+- [x] Keyboard support
+- [x] Error handling
+- [x] Decimal validation
+- [x] Dark/Light mode toggle
 - [ ] Deploy on GitHub Pages
-
----
 
 👤 Author
 
 **Yuri** — [@NyG007](https://github.com/NyG007)
-
----
-
-📄 License
-
-This project is open source and available under the [MIT License](LICENSE).

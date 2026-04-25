@@ -25,10 +25,10 @@ A clean and minimalist calculator built with pure HTML, CSS and JavaScript.
 
 📁 Project Structure
 
-NYG-Calculator/
-├── index.html     → Page structure
-├── style.css      → Visual styling
-├── script.js      → Calculation logic
+NYG-Calculator/ <br>
+├── index.html     → Page structure <br>
+├── style.css      → Visual styling <br>
+├── script.js      → Calculation logic <br>
 └── README.md      → Project documentation
 
 👤 Author

@@ -1,11 +1,10 @@
-🧮 NYG Calculator - Porject start 10/04/26 - 13:00
+🧮 NYG Calculator - Project start 10/04/26 - 13:00
 
 A clean and minimalist calculator built with pure HTML, CSS and JavaScript.
 
 📸 Preview
 
-![alt text](image.png)
-
+<img src="calculator.png"></img>
 
 ✨ Features
 
@@ -31,30 +30,6 @@ NYG-Calculator/
 ├── style.css      → Visual styling
 ├── script.js      → Calculation logic
 └── README.md      → Project documentation
-
-🚀 Getting Started
-
-### Option 1 — Open locally
-```bash
-# Clone the repository
-git clone https:
-
-# Open in browser
-Open index.html in your browser
-```
-
-📌 Project Roadmap
-
-- [x] HTML structure
-- [x] CSS styling
-- [x] JavaScript logic
-- [x] Calculation history
-- [x] Responsive layout (mobile)
-- [x] Keyboard support
-- [x] Error handling
-- [x] Decimal validation
-- [x] Dark/Light mode toggle
-- [ ] Deploy on GitHub Pages
 
 👤 Author
 
